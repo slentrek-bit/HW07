@@ -1,0 +1,42 @@
+/*
+Program Name: Math Tutor
+Purpose: Program FOr Use Math Tutoring
+Author: Shaun Entrekin
+Date Last Modified: 6/1/2026
+*/
+
+// this program is to calculate two integer numbers
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+int main () {
+    
+    // random number range
+    const int MIN = 50;
+    const int MAX = 450;
+
+    // Seedoing the random number generator
+    srand(time(0));
+
+    // Generating two random numbers between 50 and 500
+    int a = rand() % MAX + MIN;
+    int b = rand() % MAX + MIN;
+    
+    cout << setw(6) << a << endl;
+    cout << "+ " << setw(4) << b << endl;
+    cout << "------" << endl;
+    
+    cout << "\nPress Enter to see the answer...";
+    cin.get();
+
+    // Display the problem and answer
+    cout << "\n";
+    cout << setw(6) << a << endl;
+    cout << "+ " << setw(4) << b << endl;
+    cout << "------" << endl;
+    cout << setw(6) << (a + b) << endl;
+
+    return 0;
+}
